@@ -13,10 +13,18 @@ function getContent() {
 	elseif(isset($_GET['page']) && $_GET['page'] == "bio") {
 
         include __DIR__.'/../pages/bio.php';
+        if(file_exists("../pages/bio.php")){
+            $content = file("../pages/bio.php");
+            echo $content;
+        }
     }
 	elseif(isset($_GET['page']) && $_GET['page'] == "contact") {
 
         include __DIR__.'/../pages/contact.php';
+        if(file_exists("../pages/contact.php")){
+            $content = file("../pages/contact.php");
+            echo $content;
+        }
     }
 }
 
